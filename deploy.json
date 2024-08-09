@@ -1,0 +1,32 @@
+{
+  "env": ["192.168.12.174", "192.168.12.245", "192.168.12.61", "192.168.12.244"],
+  "deployRootPath": "/data/application/qiankun",
+  "homeFilePath": "/home/fileuser",
+  "username": "",
+  "deployPath": {
+    "achilles": "cd ${deployRootPath}/subapp/cdp && rm -rf achilles_bak &&  mv achilles achilles_bak && mv ${homeFilePath}/dist ./achilles && exit;",
+    "apollo-fe": "cd ${deployRootPath}/subapp/cdp && rm -rf apollo_bak &&  mv apollo apollo_bak && mv ${homeFilePath}/dist ./apollo && exit;",
+    "sourcecenter-fe": "cd ${deployRootPath}/subapp/cdp && rm -rf resource_bak &&  mv resource resource_bak && mv ${homeFilePath}/dist ./resource && exit;",
+    "tethys": "cd ${deployRootPath}/subapp/cdp && rm -rf tethys_bak &&  mv tethys tethys_bak && mv ${homeFilePath}/dist ./tethys && exit;",
+    "themis": "cd ${deployRootPath}/subapp/cdp && rm -rf themis_bak &&  mv themis themis_bak && mv ${homeFilePath}/dist ./themis && exit;",
+    "daas": "cd ${deployRootPath}/subapp && rm -rf daas_bak &&  mv daas daas_bak && mv ${homeFilePath}/dist ./daas && exit;",
+    "anquan": "cd ${deployRootPath}/subapp/dg && rm -rf anquan_bak &&  mv anquan anquan_bak && mv ${homeFilePath}/dist ./anquan && exit;",
+    "odin": "cd ${deployRootPath}/subapp/dg && rm -rf odin_bak &&  mv odin odin_bak && mv ${homeFilePath}/dist ./odin",
+    "standard-fe": "cd ${deployRootPath}/subapp/dg && rm -rf crius_bak &&  mv crius crius_bak && mv ${homeFilePath}/dist ./crius && exit;",
+    "crius-fe": "cd ${deployRootPath}/subapp/dg && rm -rf crius_bak &&  mv crius crius_bak && mv ${homeFilePath}/dist ./crius && exit;",
+    "gaea": "cd ${deployRootPath}/subapp && rm -rf gaea_bak &&  mv gaea gaea_bak && mv ${homeFilePath}/dist ./gaea && exit;",
+    "gaea-fe": "cd ${deployRootPath}/subapp && rm -rf gaea_bak &&  mv gaea gaea_bak && mv ${homeFilePath}/dist ./gaea && exit;",
+    "helper": "cd ${deployRootPath}/subapp && rm -rf helper_bak &&  mv helper helper_bak && mv ${homeFilePath}/dist ./helper && exit;",
+    "indicator": "cd ${deployRootPath}/subapp && rm -rf indicator_bak &&  mv indicator indicator_bak && mv ${homeFilePath}/dist ./indicator && exit;",
+    "p1": "cd ${deployRootPath}/subapp && rm -rf indicator_bak &&  mv indicator indicator_bak && mv ${homeFilePath}/dist ./indicator && exit;",
+    "label": "cd ${deployRootPath}/subapp && rm -rf label_bak &&  mv label label_bak && mv ${homeFilePath}/dist ./label && exit;",
+    "tag-fe": "cd ${deployRootPath}/subapp && rm -rf label_bak &&  mv label label_bak && mv ${homeFilePath}/dist ./label && exit;",
+    "metadata-fe": "cd ${deployRootPath}/subapp && rm -rf metadata_bak &&  mv metadata metadata_bak && mv ${homeFilePath}/dist ./metadata && exit;",
+    "poseidon-fe": "cd ${deployRootPath}/subapp && rm -rf poseidon_bak &&  mv poseidon poseidon_bak && mv ${homeFilePath}/dist ./poseidon && exit;",
+    "maya": "cd ${deployRootPath}/subapp/rhea && rm -rf maya_bak &&  mv maya maya_bak && mv ${homeFilePath}/dist ./maya && exit;",
+    "assets-fe": "cd ${deployRootPath}/subapp/rhea && rm -rf maya_bak &&  mv maya maya_bak && mv ${homeFilePath}/dist ./maya && exit;",
+    "rhea": "cd ${deployRootPath}/subapp/rhea && rm -rf assets_bak &&  mv assets assets_bak && mv ${homeFilePath}/dist ./assets && exit;",
+    "science-fe": "cd ${deployRootPath}/subapp && rm -rf science_bak &&  mv science science_bak && mv ${homeFilePath}/dist ./science && exit;",
+    "uranus-fe": "cd ${deployRootPath}/subapp && rm -rf uranus_bak &&  mv uranus uranus_bak && mv ${homeFilePath}/dist ./uranus && exit;"
+  }
+}

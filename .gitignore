@@ -1,0 +1,26 @@
+.idea/
+.envrc
+node_modules/
+.DS_Store
+*.map
+# configuration
+gulpfile.js
+/.vscode
+
+# output
+lib/**/*.js
+commands/**/*.js
+actions/**/*.js
+bin/**/*.js
+lib/**/*.d.ts
+commands/**/*.d.ts
+actions/**/*.d.ts
+bin/**/*.d.ts
+**/**/*.js
+**/**/*.d.ts
+**/*.js
+**/*.d.ts
+
+install.md
+/dist
+/oldFile
