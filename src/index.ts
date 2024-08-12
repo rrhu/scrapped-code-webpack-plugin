@@ -225,7 +225,11 @@ class ScrappedCodeWebpackPlugin {
     <head>
       <meta charset="UTF-8">
       <title>Title</title>
-            <style>
+       <style>
+       body {
+         width: 800px;
+         margin: 0 auto;
+       }
         h3 {
           font-weight: 400;
           color: #1f2f3d;
@@ -237,10 +241,10 @@ class ScrappedCodeWebpackPlugin {
         }
         .file li {
           height: 50px;
-          line-height: 50px;
+          line-height: 24px;
           margin: 10px;
           background: #e8f3fe;
-          padding: 0 8px;
+          padding: 4px 8px;
           color: #7dbcfc;
         }
         .card {
