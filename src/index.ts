@@ -18,6 +18,7 @@ interface Options {
   detectUnusedFiles?: boolean;
   detectUnusedExport?: boolean;
   exportHtml?: boolean | string;
+  exportJSON?: boolean | string;
   output?: string;
 }
 
@@ -33,6 +34,7 @@ class ScrappedCodeWebpackPlugin {
       detectUnusedFiles: true,
       detectUnusedExport: true,
       exportHtml: true,
+      exportJSON: false,
       output: './scrappedCode.html',
       ...options,
     };
@@ -61,7 +63,10 @@ class ScrappedCodeWebpackPlugin {
       this.logUnusedExportMap(unusedExportMap);
     }
 
-    if (options.exportHtml) {
+    if (options.exportJSON) {
+      // 导出json
+      fs.writeFileSync(options.output as string, JSON.stringify({ unusedFiles, unusedExportMap }, null, 2));
+    } else if (options.exportHtml) {
       // 导出html
       this.exportHtml(unusedFiles, unusedExportMap);
     }
@@ -274,7 +279,7 @@ class ScrappedCodeWebpackPlugin {
     <body>
     <h3>项目中闲置的文件${unusedFiles.length}</h3>
     <ul class="file">
-      ${unusedFiles.map((file, index) => `<li>(${index}): <span>${file}</span></li>`).join('')}
+      ${unusedFiles.map((file, index) => `<li>(${index}): <span class="unused-file">${file}</span></li>`).join('')}
     </ul>
     <h3>项目中导出未使用的代码</h3>
     <ul class="code">
