@@ -64,8 +64,14 @@ class ScrappedCodeWebpackPlugin {
     }
 
     if (options.exportJSON) {
+      const fileData = fs.existsSync(options.output as string)
+        ? JSON.parse(fs.readFileSync(options.output as string, 'utf-8'))
+        : {};
       // 导出json
-      fs.writeFileSync(options.output as string, JSON.stringify({ unusedFiles, unusedExportMap }, null, 2));
+      fs.writeFileSync(
+        options.output as string,
+        JSON.stringify({ ...fileData, unusedFiles, unusedExportMap }, null, 2),
+      );
     } else if (options.exportHtml) {
       // 导出html
       this.exportHtml(unusedFiles, unusedExportMap);
