@@ -38,5 +38,9 @@ export interface Options {
   detectUnusedExport?: boolean;
   // 导出html, 默认是true
   exportHtml?: boolean | string;
+  // 导出json, 默认是true
+  exportJSON?: boolean | string;
+  // 导出文件路径, 默认是html,也可以是json
+  output?: string;
 }
 ```
